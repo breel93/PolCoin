@@ -1,0 +1,181 @@
+{
+  "contractName": "PolTokenSale",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820117dad6a5b8b67c58c08424038f9b033366d7720fca713a57c318342d15da9d20029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820117dad6a5b8b67c58c08424038f9b033366d7720fca713a57c318342d15da9d20029",
+  "sourceMap": "89:71:1:-;;;115:41;8:9:-1;5:2;;;30:1;27;20:12;5:2;115:41:1;89:71;;;;;;",
+  "deployedSourceMap": "89:71:1:-;;;;;",
+  "source": "pragma solidity ^0.4.2;\r\n\r\n/**\r\n * The PolTokenSale contract does this and that...\r\n */\r\ncontract PolTokenSale {\r\n\tfunction PolTokenSale () public {\r\n\t\t\r\n\t}\t\r\n}\r\n\r\n",
+  "sourcePath": "C:\\Users\\breezil\\Desktop\\DApp\\PolCoin\\contracts\\PolTokenSale.sol",
+  "ast": {
+    "absolutePath": "/C/Users/breezil/Desktop/DApp/PolCoin/contracts/PolTokenSale.sol",
+    "exportedSymbols": {
+      "PolTokenSale": [
+        192
+      ]
+    },
+    "id": 193,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 187,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "The PolTokenSale contract does this and that...\r",
+        "fullyImplemented": true,
+        "id": 192,
+        "linearizedBaseContracts": [
+          192
+        ],
+        "name": "PolTokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 190,
+              "nodeType": "Block",
+              "src": "147:9:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 191,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "PolTokenSale",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 188,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "137:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 189,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "147:0:1"
+            },
+            "scope": 192,
+            "src": "115:41:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 193,
+        "src": "89:71:1"
+      }
+    ],
+    "src": "0:164:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/breezil/Desktop/DApp/PolCoin/contracts/PolTokenSale.sol",
+    "exportedSymbols": {
+      "PolTokenSale": [
+        192
+      ]
+    },
+    "id": 193,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 187,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "The PolTokenSale contract does this and that...\r",
+        "fullyImplemented": true,
+        "id": 192,
+        "linearizedBaseContracts": [
+          192
+        ],
+        "name": "PolTokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 190,
+              "nodeType": "Block",
+              "src": "147:9:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 191,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "PolTokenSale",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 188,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "137:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 189,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "147:0:1"
+            },
+            "scope": 192,
+            "src": "115:41:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 193,
+        "src": "89:71:1"
+      }
+    ],
+    "src": "0:164:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x321a4eb01e6c97db9a1d46d1445f57b4a8ce13e4",
+      "transactionHash": "0x4b4a3503c2eba81132c7c55b77a8a599d393d5d3aa83c49909644af05a4f8e3c"
+    }
+  },
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-07-11T19:52:22.194Z"
+}
