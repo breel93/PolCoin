@@ -61,4 +61,33 @@ contract('PolTokenSale', function(accounts){
 	    });
 	});
 
+
+
+	it('ends token sale', function(){
+		return PolToken.deployed().then(function(instance){
+			
+			tokenInstance = instance;
+
+			return PolTokenSale.deployed();
+		}).then(function(instance){
+			tokenSaleInstance = instance;
+
+			return tokenSaleInstance.endSale({ from: buyer});
+		}).then(assert.fail).catch(function(error){
+			assert(error.message.indexOf('revert' >= 0, 'must be admin to end sale'));
+			//End sale an admin
+
+			return tokenSaleInstance.endSale({ from: admin });
+
+		}).then(function(receipt){
+			return tokenInstance.balanceOf(admin);
+		}).then(function(balance){
+			assert.equal(balance.toNumber(), 999990, 'returns all unsold pol tokens a admin');
+			//token price is reset when selfDestruct was called
+			balance = web3.eth.getBalance(tokenSaleInstance.address)
+      		assert.equal(balance.toNumber(), 0);
+		});
+
+	});
+
 });

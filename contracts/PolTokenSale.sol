@@ -41,7 +41,19 @@ contract PolTokenSale {
 
 		tokenSold += _numberOfTokens;
 
-		Sell(msg.sender, _numberOfTokens);
+		Sell(msg.sender, _numberOfTokens); 
+	}
+
+	function endSale() public {
+
+		require (msg.sender == admin);
+
+		require(tokenContract.transfer(admin, tokenContract.balanceOf(this)));
+			
+		// selfdestruct(admin);
+
+        // Just transfer the balance to the admin
+        admin.transfer(address(this).balance);
 	}
 }
 
