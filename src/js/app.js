@@ -4,7 +4,7 @@ App = {
   account: '0x0',
   loading: false,
   tokenPrice: 1000000000000000,
-  tokensSold: 0,
+  tokenSold: 0,
   tokensAvailable: 750000,
 
 
@@ -13,7 +13,10 @@ App = {
     return App.initWeb3();
   },
 
+
+
   initWeb3: function(){
+    
     if (typeof web3 !== 'undefined') {
       // If a web3 instance is already provided by Meta Mask.
       App.web3Provider = web3.currentProvider;
@@ -48,7 +51,7 @@ App = {
   },
 
    // Listen for events emitted from the contract
-   listenForEvents: function() {
+  listenForEvents: function() {
     App.contracts.PolTokenSale.deployed().then(function(instance) {
       instance.Sell({}, {
         fromBlock: 0,
@@ -88,13 +91,13 @@ App = {
     }).then(function(tokenPrice) {
       App.tokenPrice = tokenPrice;
       $('.token-price').html(web3.fromWei(App.tokenPrice, "ether").toNumber());
-      return polTokenSaleInstance.tokensSold();
-    }).then(function(tokensSold) {
-      App.tokensSold = tokensSold.toNumber();
-      $('.tokens-sold').html(App.tokensSold);
+      return polTokenSaleInstance.tokenSold();
+    }).then(function(tokenSold) {
+      App.tokenSold = tokenSold.toNumber();;
+      $('.tokens-sold').html(App.tokenSold);
       $('.tokens-available').html(App.tokensAvailable);
 
-      var progressPercent = (Math.ceil(App.tokensSold) / App.tokensAvailable) * 100;
+      var progressPercent = (Math.ceil(App.tokenSold) / App.tokensAvailable) * 100;
       $('#progress').css('width', progressPercent + '%');
 
       // Load token contract
@@ -102,7 +105,7 @@ App = {
         polTokenInstance = instance;
         return polTokenInstance.balanceOf(App.account);
       }).then(function(balance) {
-        $('.dapp-balance').html(balance.toNumber());
+        $('.pol-balance').html(balance.toNumber());
         App.loading = false;
         loader.hide();
         content.show();
@@ -123,8 +126,8 @@ App = {
       });
     }).then(function(result) {
       console.log("Tokens bought...")
-      $('form').trigger('reset') // reset number of tokens in form
-      // Wait for Sell event
+      $('form').trigger('reset') 
+    
     });
   }
 }
