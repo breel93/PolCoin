@@ -109,6 +109,7 @@ App = {
         App.loading = false;
         loader.hide();
         content.show();
+
       })
     });
   },
